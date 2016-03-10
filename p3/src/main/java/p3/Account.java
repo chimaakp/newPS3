@@ -30,7 +30,7 @@ public class Account {
 		return (annualInterestRate / 12);
 	}
 	
-	public double getid(){
+	public int getid(){
 		return id;
 	}
 
