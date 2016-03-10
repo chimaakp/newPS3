@@ -5,6 +5,7 @@ import java.util.Date;
 import org.junit.Test;
 
 
+
 public class AccountTest {
 	@Test
 	public void TestAccount() {
@@ -12,6 +13,9 @@ public class AccountTest {
 		double texpected = t.getbalance();
 		double tactual = 0;
 		assertTrue(texpected == tactual);
+		System.out.printf("Your balance is $%d, your monthly interest rate %d percent, and your account was created on" 
+		+ t.getdateCreated(), t.getbalance(), t.getMonthlyInterestRate());
+		
 		}
 	
 		
@@ -46,7 +50,7 @@ public class AccountTest {
 		Date t5expected = t5.getdateCreated();
 		Date t5actual = new Date();
 		assertTrue(t5expected == t5actual);
-		
+			
 	}	
 	@Test		
 	public void Testwithdraw(){
@@ -64,10 +68,21 @@ public class AccountTest {
 		assertTrue(t7expected == t7actual);
 			
 	}
-
+	@Test
+	public void TestOverdraw(){
+		Account t8 = new Account();
+		try{
+		double t8test = t8.withdraw(500);
+		}
+		catch (InsufficientFundsException e) {
+			e.printStackTrace();
+			fail(" failed");
 	
-	
-		fail("Not yet implemented");
+		}
+		
 	}
 
+	
 }
+
+
