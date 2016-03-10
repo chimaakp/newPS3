@@ -8,7 +8,7 @@ public class Account {
 	private double balance;
 	private double annualInterestRate;
 	private Date dateCreated = new Date();
-	private int customer = ThreadLocalRandom.current().nextInt(0, 6000 + 1);
+	private int customer = ThreadLocalRandom.current().nextInt(0, 9999 + 1);
 	//creates a new account with a number besides zero
 	
 	//constructors
@@ -18,10 +18,10 @@ public class Account {
 		annualInterestRate = 0;
 	}
 	
-	Account(int newid, double newbalance, double newannualInterestRate) {
-		id = newid;
-		balance = newbalance;
-		annualInterestRate = newannualInterestRate;
+	Account(int id, double balance, double annualInterestRate) {
+		this.id = id;
+		this.balance = balance;
+		this.annualInterestRate = annualInterestRate;
 	}
 	
 
@@ -51,17 +51,15 @@ public class Account {
 	
 	//mutator methods
 	public void setbalance(double balance) {
-	this.balance = balance;
+	balance = this.balance;
 	}
 	public void setid(int id) {
-	this.id = id;
+	id = this.id;
 	}
 	public void setannualInterestRate(double annualInterestRate) {
-	this.annualInterestRate = annualInterestRate;
+	annualInterestRate = this.annualInterestRate;
 	}	
-	public void setannualInterestRate(double annualInterestRate) {
-	this.annualInterestRate = annualInterestRate;
-	}
+	
 	
 	
 	
@@ -73,4 +71,6 @@ public class Account {
 	private double deposit(double add){
 		return balance += add;
 	}
+	
+	
 }
