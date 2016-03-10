@@ -1,18 +1,19 @@
 package p3;
 
-import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.Date;
-
 
 public class Account {
 	private int  id;
 	private double balance;
 	private double annualInterestRate;
 	private Date dateCreated = new Date();
+	private int customer = ThreadLocalRandom.current().nextInt(0, 6000 + 1);
+	//creates a new account with a number besides zero
 	
 	//constructors
 	Account() {
-		id = 0;
+		id = customer;
 		balance = 0;
 		annualInterestRate = 0;
 	}
