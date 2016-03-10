@@ -5,19 +5,22 @@ import java.util.Date;
 
 
 public class Account {
-	private int  id = 0;
-	private double balance = 0;
-	private double annualInterestRate = 0;
+	private int  id;
+	private double balance;
+	private double annualInterestRate;
 	private Date dateCreated = new Date();
 	
 	//constructors
 	Account() {
-	
+		id = 0;
+		balance = 0;
+		annualInterestRate = 0;
 	}
 	
-	Account(int id, double balance) {
-		private int id = id;
-		private double balance = balance;
+	Account(int newid, double newbalance, double newannualInterestRate) {
+		id = newid;
+		balance = newbalance;
+		annualInterestRate = newannualInterestRate;
 	}
 	
 
@@ -38,7 +41,7 @@ public class Account {
 		return annualInterestRate;
 	}
 	
-	public double getdateCreated(){
+	public Date getdateCreated(){
 		return dateCreated;
 	}
 	
