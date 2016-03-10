@@ -68,7 +68,7 @@ public class Account {
 	private double withdraw(double remove){
 		return balance -= remove;
 	}
-	private double deposit(double add){
+	double deposit(double add){
 		return balance += add;
 	}
 	
